@@ -1,0 +1,142 @@
+@startuml
+class entity.Administrador #aqua {
++Usuario: String
++Contraseña: String
++getUsuario()
++setUsuario()
++getContraseña()
++setContraseña()
+}
+interface model.IAdministradorModel{
+
+}
+class model.AdministradorModel{
+
+}
+class controlador.Administrador{
+
+}
+class vista.Admin{
+
+}
+
+class entity.AltaEquipo #aqua {
++Nombre: String
++getNombre()
++setNombre()
+}
+interface model.IAltaEquipoModel{
+
+}
+class model.AltaEquipoModel{
+
+}
+class controlador.AltaEquipo{
+
+}
+class vista.AltaE{
+
+}
+class entity.AltaJugador #aqua {
++Nombre: String
++Número: String
++getNombre()
++setNombre()
++getNumero()
++setNumero()
+}
+interface model.IAltaJugadorModel{
+
+}
+class model.AltaJugadorModel{
+
+}
+class controlador.AltaJugador{
+
+}
+class vista.AltaJ{
+
+}
+class entity.AltaJugadora #aqua {
++Nombre: String
++Número: String
++getNombre()
++setNombre()
++getNumero()
++setNumero()
+}
+interface model.IAltaJugadoraModel{
+
+}
+class model.AltaJugadoraModel{
+
+}
+class controlador.AltaJugadora{
+
+}
+class vista.AltaJF{
+
+}
+
+class entity.SeleccionarD #aqua {
+-Varonil: Button
+-Femenil: Button
+-getVaronil()
+-setVaronil()
+-getFemenil()
+-setFemenil()
+}
+interface model.ISeleccionarDModel{
+
+}
+class model.SeleccionarDModel{
+
+}
+class controlador.SeleccionarD{
+
+}
+class vista.SelectD{
+
+}
+class entity.SeleccionarTV #aqua {
+-Tabla_General: Button
+-Tabla_Jugadores: Button
+-getTabla_General()
+-setTabla_General()
+-getTabla_Jugadores()
+-setTabla_Jugadores()
+}
+interface model.ISeleccionarTVModel{
+
+}
+class model.SeleccionarTVModel{
+
+}
+class controlador.SeleccionarTV{
+
+}
+class vista.SelectTV{
+
+}
+class entity.SeleccionarTF #aqua {
+-Tabla_General: Button
+-Tabla_Jugadoras: Button
+-getTabla_General()
+-setTabla_General()
+-getTabla_Jugadoras()
+-setTabla_Jugadoras()
+}
+interface model.ISeleccionarTFModel{
+
+}
+class model.SeleccionarTFModel{
+
+}
+class controlador.SeleccionarTF{
+
+}
+class vista.SelectTF{
+
+}
+
+@enduml
