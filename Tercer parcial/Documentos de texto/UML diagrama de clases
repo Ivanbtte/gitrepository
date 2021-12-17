@@ -1,0 +1,277 @@
+@startuml
+class entity.Equipo #aqua {
+-Nombre: String
++void Equipo()
++void Equipo(Nombre)
++String getNombre()
++void setNombre()
+}
+interface model.IEquipoModel{
+-equipo: Equipo
++void crearEquipo(Equipo equipo)
++void eliminarEquipo(int id)
++void actualizarEquipo(Equipo equipo)
++List<Equipo> ListaEquipo()
++Equipo consultaEquipo(int id)
+}
+class model.EquipoModelImpl{
+-conexion: Conexion
+-equipo: Equipo
++@Override void crearEquipo()
++@Override void eliminarEquipo()
++@Override void actualizarEquipo()
++@Override List<Equipo> ListaEquipo()
++@Override Equipo consultaEquipo()
+}
+class controller.Equipo{
++@Override void crearEquipo()
++@Override void eliminarEquipo()
++@Override void actualizarEquipo()
++@Override List<Equipo> ListaEquipo()
++@Override Equipo consultaEquipo()
+}
+class vista.Equipo{
+
+}
+
+class entity.Jugador #aqua {
++Nombre: String
++Equipo: String
++getNombre()
++setNombre()
++getEquipo()
++setEquipo()
+}
+interface model.IJugadorModel{
+-jugador: Jugador
++void crearJugador(Jugador jugador)
++void eliminarJugador(int id)
++void actualizarJugador(Jugador jugador)
++List<Jugador> ListaJugador()
++Jugador consultaJugador(int id)
+}
+class model.JugadorModelImpl{
+-conexion: Conexion
+-jugador: Jugador
++@Override void crearJugador()
++@Override void eliminarJugador()
++@Override void actualizarJugador()
++@Override List<Jugador> ListaJugador()
++@Override Jugador consultaJugador()
+}
+class controller.Jugador{
++@Override void crearJugador()
++@Override void eliminarJugador()
++@Override void actualizarJugador()
++@Override List<Jugador> ListaJugador()
++@Override Jugador consultaJugador()
+}
+class vista.JugadorV{
+
+}
+
+class entity.Jugadora #aqua {
++Nombre: String
++Equipo: String
++getNombre()
++setNombre()
++getEquipo()
++setEquipo()
+}
+interface model.IJugadoraModel{
+-jugadora: Jugadora
++void crearJugadora(Jugadora jugadora)
++void eliminarJugadora(int id)
++void actualizarJugadora(Jugadora jugadora)
++List<Jugadora> ListaJugadora()
++Jugador consultaJugadora(int id)
+}
+class model.JugadoraModelImpl{
+-conexion: Conexion
+-jugadora: Jugadora
++@Override void crearJugadora()
++@Override void eliminarJugadora()
++@Override void actualizarJugadora()
++@Override List<Jugadora> ListaJugadora()
++@Override Jugadora consultaJugadora()
+}
+class controller.Jugadora{
++@Override void crearJugadora()
++@Override void eliminarJugadora()
++@Override void actualizarJugadora()
++@Override List<Jugadora> ListaJugadora()
++@Override Jugadora consultaJugadora()
+}
+class vista.JugadoraF{
+
+}
+class entity.Resultado #aqua {
++Equipo1: String
++Equipo2: String
++GolE1: String
++GolE2: String
++getEquipo1()
++setEquipo1()
++getEquipo2()
++setEquipo2()
++getGolE1()
++setGolE1()
++getGolE2()
++setGolE2()
+}
+interface model.IResultadoModel{
+-resultado: Resultado
++void registrarResultado(Resultado resultado)
++void eliminarResultado(int id)
++void actualizarResultado(Resultado resultado)
++List<Resultado> ListaResultado()
++Resultado consultaResultado(int id)
+}
+class model.ResultadoModelImpl{
+-conexion: Conexion
+-resultado: Resultado
++@Override void crearResultado()
++@Override void eliminarResultado()
++@Override void actualizarResultado()
++@Override List<Resultado> ListaResultado()
++@Override Resultado consultaResultado()
+}
+class controller.Resultado{
++@Override void crearResultado()
++@Override void eliminarResultado()
++@Override void actualizarResultado()
++@Override List<Resultado> ListaResultado()
++@Override Resultado consultaResultado()
+}
+class vista.Resultado{
+
+}
+class entity.Goles #aqua {
++Jugador: String
++Goles: String
++getJugador()
++setJugador()
++getGoles()
++setGoles()
+}
+interface model.IGolesModel{
+-goles: Goles
++void registrarGoles(Goles goles)
++void eliminarGoles(int id)
++void actualizarGoles(Goles goles)
++List<Goles> ListaGoles()
++Goles consultaGoles(int id)
+}
+class model.GolesModelImpl{
+-conexion: Conexion
+-goles: Goles
++@Override void crearGoles()
++@Override void eliminarGoles()
++@Override void actualizarGoles()
++@Override List<Goles> ListaGoles()
++@Override Goles consultaGoles()
+}
+class controller.Goles{
++@Override void crearGoles()
++@Override void eliminarGoles()
++@Override void actualizarGoles()
++@Override List<Goles> ListaGoles()
++@Override Goles consultaGoles()
+}
+class vista.Goles{
+
+}
+class entity.Tarjetas #aqua {
++Jugador: String
++Tarjetas: String
++getJugador()
++setJugador()
++getTarjetas()
++setTarjetas()
+}
+interface model.ITarjetasModel{
+-tarjetas: Tarjetas
++void registrarTarjetas(Tarjetas tarjetas)
++void eliminarTarjetas(int id)
++void actualizarTarjetas(Tarjetas tarjetas)
++List<Tarjetas> ListaTarjetas()
++Tarjetas consultaTarjetas(int id)
+}
+class model.TarjetasModelImpl{
+-conexion: Conexion
+-tarjetas: Tarjetas
++@Override void crearTarjetas()
++@Override void eliminarTarjetas()
++@Override void actualizarTarjetas()
++@Override List<Tarjetas> ListaTarjetas()
++@Override Tarjetas consultaTarjetas()
+}
+class controller.Tarjetas{
++@Override void crearTarjetas()
++@Override void eliminarTarjetas()
++@Override void actualizarTarjetas()
++@Override List<Tarjetas> ListaTarjetas()
++@Override Tarjetas consultaTarjetas()
+}
+class vista.Tarjetas{
+
+}
+class entity.Asistencia #aqua {
++Jugador: String
++Asistencia: String
++getJugador()
++setJugador()
++getAsistencia()
++setAsistencia()
+}
+interface model.IAsistenciaModel{
+-Asistencia: Asistencia
++void registrarAsistencia(Asistencia asistencia)
++void eliminarAsistencia(int id)
++void actualizarAsistencia(Asistencia asistencia)
++List<Asistencia> ListaAsistencia()
++Asistencia consultaAsistencia(int id)
+}
+class model.AsistenciaModelImpl{
+-conexion: Conexion
+-asistencia: Asistencia
++@Override void crearAsistencia()
++@Override void eliminarAsistencia()
++@Override void actualizarAsistencia()
++@Override List<Asistencia> ListaAsistencia()
++@Override Asistencia consultaAsistencia()
+}
+class controller.Asistencia{
++@Override void crearAsistencia()
++@Override void eliminarAsistencia()
++@Override void actualizarAsistencia()
++@Override List<Asistencia> ListaAsistencia()
++@Override Asistencia consultaAsistencia()
+}
+class vista.Asistencia{
+
+}
+model.IEquipoModel <|-- model.EquipoModelImpl
+model.IJugadorModel <|-- model.JugadorModelImpl
+model.IJugadoraModel <|-- model.JugadoraModelImpl
+model.IResultadoModel <|-- model.ResultadoModelImpl
+model.IGolesModel <|-- model.GolesModelImpl
+model.IAsistenciaModel <|-- model.AsistenciaModelImpl
+model.ITarjetasModel <|-- model.TarjetasModelImpl
+
+model.IEquipoModel <|-- controller.Equipo
+model.IJugadorModel <|-- controller.Jugador
+model.IJugadoraModel <|-- controller.Jugadora
+model.IResultadoModel <|-- controller.Resultado
+model.IGolesModel <|-- controller.Goles
+model.IAsistenciaModel <|-- controller.Asistencia
+model.ITarjetasModel <|-- controller.Tarjetas
+
+model.IEquipoModel<--entity.Equipo
+model.IJugadorModel<--entity.Jugador
+model.IJugadoraModel<--entity.Jugadora
+model.IResultadoModel<--entity.Resultado
+model.IGolesModel<--entity.Goles
+model.IAsistenciaModel<--entity.Asistencia
+model.ITarjetasModel<--entity.Tarjetas
+@enduml
