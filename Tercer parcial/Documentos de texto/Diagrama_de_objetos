@@ -1,0 +1,106 @@
+Diagrama de objetos Tarjeta
+@startuml
+object Tarjeta{
++Jugador
+}
+object TarjetaAplicada{
++Color
+}
+Tarjeta -- TarjetaAplicada
+@enduml
+
+Diagrama de objetos Resultados
+@startuml
+object Resultado{
++EquipoLocal
++EquipoVisitante
+}
+object ResultadoEquipoLocal{
++GolesAFavor
++GolesEnContra
+}
+object ResultadoEquipoVisitante{
++GolesAFavor
++GolesEnContra
+}
+object ResultadoGanador{
++Puntos
+}
+object ResultadoPerdedor{
++Puntos
+}
+object ResultadoEmpatado{
++Puntos
+}
+Resultado -- ResultadoEquipoLocal
+Resultado -- ResultadoEquipoVisitante
+ResultadoEquipoLocal -- ResultadoGanador
+ResultadoEquipoVisitante -- ResultadoGanador
+ResultadoEquipoLocal -- ResultadoPerdedor
+ResultadoEquipoVisitante -- ResultadoPerdedor
+ResultadoEquipoLocal -- ResultadoEmpatado
+ResultadoEquipoVisitante -- ResultadoEmpatado
+@enduml
+
+Diagrama de objetos Jugadora
+@startuml
+object Jugadora{
++Nombre
++Apellido
++Edad
++Sexo
+}
+object JugadoraInscrito{
++Equipo
+}
+Jugadora -- JugadoraInscrito
+@enduml
+
+Diagrama de objetosJugador
+@startuml
+object Jugador{
++Nombre
++Apellido
++Edad
++Sexo
+}
+object JugadorInscrito{
++Equipo
+}
+Jugador -- JugadorInscrito
+@enduml
+
+Diagrama de objetos Goles
+@startuml
+object Goles{
++Jugador
+}
+object GolesAnotados{
++Cantidad
+}
+Goles -- GolesAnotados
+@enduml
+
+Diagrama de objetos Equipo
+@startuml
+object Equipo{
++Nombre
+}
+object EquipoInscrito{
++Division
++Jugadores
+}
+Equipo -- EquipoInscrito
+@enduml
+
+Diagrama de objetos Asistencia
+@startuml
+object Asistencia{
++Jugador
+}
+object AsistenciaAnotada{
++Cantidad
+}
+Asistencia -- AsistenciaAnotada
+@enduml
+
