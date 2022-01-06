@@ -1,0 +1,389 @@
+Diagrama de caso de uso 1 (pantalla principal)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Usario_de_liga
+rectangle Pantalla_Principal {
+  Administrador_de_liga -- (Administrar)
+  Administrador_de_liga -- (Visualizar)
+  (Visualizar) -- Usario_de_liga
+}
+@enduml
+
+Diagrama de caso de uso 1.1 (Login)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Login {
+  Administrador_de_liga -- (Insertar usuario)
+  Administrador_de_liga -- (Insertar contraseña)
+  Administrador_de_liga -- (Validar datos)
+  (Insertar usuario) -- Base_de_datos
+  (Insertar contraseña) -- Base_de_datos
+  (Validar datos) -- Base_de_datos
+}
+@enduml
+
+Diagrama de caso de uso 1.2 (Seleccionar división)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor usuario_invitado
+actor Base_de_datos
+rectangle Seleccionar_division {
+  usuario_invitado -- (Elegir division varonil)
+  usuario_invitado -- (Elegir division Femenil)
+  usuario_invitado -- (Validar entrada)
+  (Elegir division varonil) -- Base_de_datos
+  (Elegir division Femenil) -- Base_de_datos
+  (Validar entrada) -- Base_de_datos
+}
+@enduml
+
+ Diagrama caso de uso 1.1.1 (Administrador varonil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Administrador_varonil{
+Administrador_de_liga -- (Registro de resultados)
+Administrador_de_liga -- (Registro de tarjetas)
+Administrador_de_liga -- (Registro de goles)
+Administrador_de_liga -- (Registro de asistencia)
+Administrador_de_liga --(Editar equipo)
+Administrador_de_liga --(Alta de equipo)
+Administrador_de_liga --(Alta de jugadores)
+Administrador_de_liga --(Tabla de jugadores)
+Administrador_de_liga --(Estadisticas de jugadores)
+Administrador_de_liga --(Editar jugadores)
+Administrador_de_liga --(Editar nombre de equipos)
+
+
+(Registro de resultados) -- Base_de_datos
+(Registro de tarjetas) -- Base_de_datos
+(Registro de goles) -- Base_de_datos
+(Registro de asistencia) -- Base_de_datos
+(Editar equipo) -- Base_de_datos
+(Alta de equipo) -- Base_de_datos
+(Alta de jugadores) -- Base_de_datos
+(Tabla de jugadores) -- Base_de_datos
+(Estadisticas de jugadores) -- Base_de_datos
+(Editar jugadores) -- Base_de_datos
+(Editar nombre de equipos) -- Base_de_datos
+
+}
+@enduml
+
+ Diagrama caso de uso 1.1.2 (Administrador femenil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Administrador_femenil {
+Administrador_de_liga -- (Registro de resultados)
+Administrador_de_liga -- (Registro de tarjetas)
+Administrador_de_liga -- (Registro de goles)
+Administrador_de_liga -- (Registro de asistencia)
+Administrador_de_liga --(Editar equipo)
+Administrador_de_liga --(Alta de equipo)
+Administrador_de_liga --(Alta de jugadores)
+Administrador_de_liga --(Tabla de jugadores)
+Administrador_de_liga --(Estadisticas de jugadores)
+Administrador_de_liga --(Editar jugadores)
+Administrador_de_liga --(Editar nombre de equipos)
+
+
+(Registro de resultados) -- Base_de_datos
+(Registro de tarjetas) -- Base_de_datos
+(Registro de goles) -- Base_de_datos
+(Registro de asistencia) -- Base_de_datos
+(Editar equipo) -- Base_de_datos
+(Alta de equipo) -- Base_de_datos
+(Alta de jugadores) -- Base_de_datos
+(Tabla de jugadores) -- Base_de_datos
+(Estadisticas de jugadores) -- Base_de_datos
+(Editar jugadores) -- Base_de_datos
+(Editar nombre de equipos) -- Base_de_datos
+
+}
+@enduml
+
+ Diagrama caso de uso 1.2.1 (Seleccion de tabla varonil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Usuario_de_liga
+rectangle Seleccion_de_tabla_varonil{
+Administrador_de_liga -- (Tabla de equipos)
+Administrador_de_liga -- (Tabla de jugadores)
+
+
+(Tabla de equipos) -- Usuario_de_liga
+(Tabla de jugadores) -- Usuario_de_liga
+
+
+}
+@enduml
+
+Diagrama caso de uso 1.2.2 (Seleccion de tabla femenil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Usuario_de_liga
+rectangle Seleccion_de_tabla_femenil {
+Administrador_de_liga -- (Tabla de equipos)
+Administrador_de_liga -- (Tabla de jugadores)
+
+
+(Tabla de equipos) -- Usuario_de_liga
+(Tabla de jugadores) -- Usuario_de_liga
+
+
+}
+@enduml
+
+
+Diagrama caso de uso 1.1.1.1 (Registro de resultado categoria varonil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Registro_de_resultados_categoria_varonil {
+Administrador_de_liga -- (Registrar nombre de equipo local)
+Administrador_de_liga -- (Registrar nombre de equipo visitante)
+Administrador_de_liga -- (Registro de goles de equipo local)
+Administrador_de_liga -- (Registro de goles de equipo visitante)
+
+(Registrar nombre de equipo local) -- Base_de_datos
+(Registrar nombre de equipo visitante) -- Base_de_datos
+(Registro de goles de equipo local) -- Base_de_datos
+(Registro de goles de equipo visitante) -- Base_de_datos
+
+}
+@enduml
+
+Diagrama caso de uso 1.1.1.2 (Registro de tarjetas categoria varonil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Registro_de_tarjetas_categoria_varonil {
+Administrador_de_liga -- (Registrar nombre de equipo)
+Administrador_de_liga -- (Registrar nombre de jugador)
+Administrador_de_liga -- (Registro de color de tarjeta)
+
+(Registrar nombre de equipo) -- Base_de_datos
+(Registrar nombre de jugador) -- Base_de_datos
+(Registro de color de tarjeta) -- Base_de_datos
+
+}
+@enduml
+
+Diagrama caso de uso 1.1.1.3 (Registro de goles varonil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Registro_de_goles_varonil {
+Administrador_de_liga -- (Registro de nombre de equipo)
+Administrador_de_liga -- (Registro de nombre de jugador)
+Administrador_de_liga -- (Registro de goles)
+
+(Registro de nombre de equipo) -- Base_de_datos
+(Registro de nombre de jugador) -- Base_de_datos
+(Registro de goles) -- Base_de_datos
+
+}
+@enduml
+
+ Diagrama caso de uso 1.1.1.4 (Registro de asistencias categoria varonil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Registro_de_asistencias_categoria_varonil {
+Administrador_de_liga -- (Registrar nombre de equipo)
+Administrador_de_liga -- (Registrar nombre de jugador)
+Administrador_de_liga -- (Registrar el numero de asistencias)
+
+(Registrar nombre de equipo) -- Base_de_datos
+(Registrar nombre de jugador) -- Base_de_datos
+(Registrar el numero de asistencias) -- Base_de_datos
+
+}
+@enduml
+
+Diagrama caso de uso 1.1.2.1 (Registro de resultados categoria femenil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Registro_de_resultados_categoria_femenil {
+Administrador_de_liga -- (Registrar nombre de equipo local)
+Administrador_de_liga -- (Registrar nombre de equipo visitante)
+Administrador_de_liga -- (Registro de goles de equipo local)
+Administrador_de_liga -- (Registro de goles de equipo visitante)
+
+(Registrar nombre de equipo local) -- Base_de_datos
+(Registrar nombre de equipo visitante) -- Base_de_datos
+(Registro de goles de equipo local) -- Base_de_datos
+(Registro de goles de equipo visitante) -- Base_de_datos
+
+}
+@enduml
+
+Diagrama caso de uso 1.1.2.2 (Registro de tarjetas categoria femenil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Registro_de_tarjetas_categoria_femenil {
+Administrador_de_liga -- (Registrar nombre de equipo)
+Administrador_de_liga -- (Registrar nombre de jugador)
+Administrador_de_liga -- (Registro de color de tarjeta)
+
+(Registrar nombre de equipo) -- Base_de_datos
+(Registrar nombre de jugador) -- Base_de_datos
+(Registro de color de tarjeta) -- Base_de_datos
+
+}
+@enduml
+
+Diagrama caso de uso 1.1.2.3 (Registro de goles femenil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Registro_de_goles_femenil {
+Administrador_de_liga -- (Registro de nombre de equipo)
+Administrador_de_liga -- (Registro de nombre de jugador)
+Administrador_de_liga -- (Registro de goles)
+
+(Registro de nombre de equipo) -- Base_de_datos
+(Registro de nombre de jugador) -- Base_de_datos
+(Registro de goles) -- Base_de_datos
+
+}
+@enduml
+
+Diagrama caso de uso 1.1.2.4 (Registro de asistencias categoria femenil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle Registro_de_asistencias_categoria_varonil {
+Administrador_de_liga -- (Registro de nombre de equipo)
+Administrador_de_liga -- (Registro de nombre de jugador)
+Administrador_de_liga -- (Registro de goles)
+
+(Registro de nombre de equipo) -- Base_de_datos
+(Registro de nombre de jugador) -- Base_de_datos
+(Registro de goles) -- Base_de_datos
+
+}
+@enduml
+
+ Diagrama caso de uso 1.2.1.1 (Tabla de equipos varonil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Usuario_de_liga
+actor Base_de_datos
+rectangle Tabla_de_equipos_varonil {
+Administrador_de_liga -- (Consultar resultados)
+Usuario_de_liga -- (Consultar resultados)
+
+(Consultar resultados) -- Base_de_datos
+
+
+}
+@enduml
+
+ Diagrama caso de uso 1.2.1.2 (Tabla de jugadores varonil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle tabla_de_jugadores_varonil{
+Administrador_de_liga -- (consulta nombre de jugadores)
+Administrador_de_liga -- (Visualiza jugadores)
+Administrador_de_liga -- (Salir)
+
+(consulta nombre de jugadores) -- Base_de_datos
+(Visualiza jugadores) -- Base_de_datos
+(Salir) -- Base_de_datos
+
+}
+@enduml
+
+ Diagrama caso de uso 1.2.2.1 (tabla de equipos femenil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Usuario_de_liga
+actor Base_de_datos
+rectangle Tabla_de_equipos_femenil {
+Administrador_de_liga -- (Consultar resultados)
+Usuario_de_liga -- (Consultar resultados)
+
+(Consultar resultados) -- Base_de_datos
+
+
+}
+@enduml
+
+Diagrama caso de uso 1.2.2.2 (Tabla de jugadores femenil)
+
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrador_de_liga
+actor Base_de_datos
+rectangle tabla_de_jugadores_femenil{
+Administrador_de_liga -- (consulta nombre de jugadores)
+Administrador_de_liga -- (Visualiza jugadores)
+Administrador_de_liga -- (Salir)
+
+(consulta nombre de jugadores) -- Base_de_datos
+(Visualiza jugadores) -- Base_de_datos
+(Salir) -- Base_de_datos
+
+}
+@enduml
+
