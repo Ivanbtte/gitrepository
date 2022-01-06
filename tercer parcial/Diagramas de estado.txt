@@ -1,0 +1,60 @@
+Diagrama de estados Tarjetas
+@startuml
+[*] --> Seleccionado : Seleccionando jugador
+Seleccionado --> TarjetaAmarilla : Seleccionado color de la tarjeta
+Seleccionado --> TarjetaRoja : Seleccionado color de la tarjeta
+TarjetaRoja --> [*]
+TarjetaAmarilla --> [*]
+@enduml
+
+Diagrama de estados Resultado
+@startuml
+[*] --> Seleccionado : Seleccionando equipos
+Seleccionado --> EquipoLocal : Ingresando resultados
+Seleccionado --> EquipoVisitante : Ingresando resultados
+EquipoLocal --> EquipoGanador : Revisando resultados
+EquipoLocal --> EquipoPerdedor : Revisando resultados
+EquipoVisitante --> EquipoGanador : Revisando resultados
+EquipoVisitante --> EquipoPerdedor : Revisando resultados
+EquipoLocal --> Empate : Revisando resultados
+EquipoVisitante --> Empate : Revisando resultados
+EquipoPerdedor --> [*]
+EquipoGanador --> [*]
+Empate --> [*]
+@enduml
+
+Diagrama de estados Jugadora
+@startuml
+[*] --> Inscrito : Inscribiendo
+Inscrito --> Registrado : Registrando en un equipo
+Registrado --> [*]
+@enduml
+
+Diagrama de estados Jugador
+@startuml
+[*] --> Inscrito : Inscribiendo
+Inscrito --> Registrado : Registrando en un equipo
+Registrado --> [*]
+@enduml
+
+Diagrama de estados Goles
+@startuml
+[*] --> Seleccionado : Seleccionando jugador
+Seleccionado --> Escrito : Anotando cantidad de goles
+Escrito --> [*]
+@enduml
+
+Diagrama de estados Equipo
+@startuml
+[*] --> Inscrito : Inscribiendo
+Inscrito --> EquipoCompleto : Registrando jugadores
+EquipoCompleto --> EquipoIngresado : Ingresando equipo a su categoria
+EquipoIngresado --> [*]
+@enduml
+
+Diagrama de estados Asistencia
+@startuml
+[*] --> Seleccionado : Seleccionando jugador
+Seleccionado --> Escrito : Anotando cantidad de asistencias
+Escrito --> [*]
+@enduml
