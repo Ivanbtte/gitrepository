@@ -1,0 +1,20 @@
+@startuml
+actor Administrador
+Administrador --> Login: Requiere autenticación
+Login --> Administrador: Respuesta de autenticación
+Administrador -> Equipo: Registra Nombre de Equipo
+Administrador -> Jugador: Registra Nombre de Jugador
+Administrador -> Jugadora:Registra Nombre de Jugadora
+Administrador -> Resultados: Registra Resultados de cada Partido
+Administrador -> Goles: Registra los Goles anotados por un Jugador/a
+Administrador -> Asistencias: Registra las Asistencias hechas por un Jugador/a
+Administrador -> Tarjetas: Registra las tarjetas de sanción a un Jugador/a
+database liga
+liga <-- Equipo: Manda los datos registrados a la BD
+liga <-- Jugador: Manda los datos registrados a la BD
+liga <-- Jugadora: Manda los datos registrados a la BD
+liga <-- Resultados: Manda los datos registrados a la BD
+liga <-- Goles: Manda los datos registrados a la BD
+liga <-- Asistencias: Manda los datos registrados a la BD
+liga <-- Tarjetas: Manda los datos registrados a la BD
+@enduml
